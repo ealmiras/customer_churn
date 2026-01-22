@@ -42,3 +42,8 @@ source .venv/bin/activate  # macOS/Linux
 # .venv\Scripts\activate   # Windows
 
 pip install -r requirements.txt
+```
+
+## Project Artifacts
+The HTML files in this repository are static exports of Jupyter notebooks for easy viewing. 
+They are not part of the application code.
