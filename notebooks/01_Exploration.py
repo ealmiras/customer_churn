@@ -570,4 +570,7 @@ plt.show()
 # - Tenure and recency-related features show the strongest separation.
 # - Several categorical features exhibit meaningful churn variation.
 # - Some features may pose leakage risk and will be treated cautiously.
+
+# %%
+comb_df.to_csv(folder_path + '/data/ecommerce_churn_data_eda.csv')
 # %%

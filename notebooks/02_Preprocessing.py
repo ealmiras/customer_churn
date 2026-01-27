@@ -37,8 +37,8 @@
 # *DaySinceLastOrder will be excluded from baseline models due to potential leakage and reconsidered only after a strict prediction timestamp is defined.*
 #
 # **B. Categorical features (candidates)**
-# - PreferredLoginDevice
-# - PreferredPaymentMode
+# - PreferredLoginDevice - phone & mobile phone combined
+# - PreferredPaymentMode - CC & Credit Card combined + COD & Cash on Delivery combined
 # - Gender
 # - PreferredOrderCategory  
 # - MaritalStatus
@@ -87,4 +87,4 @@
 # - **Imbalanced Target**: Churn is imbalanced, so evaluation metrics will account for this (e.g., using AUC-ROC, F1-score).
 # - **Feature Interactions**: Some features may have predictive power only in combination. Feature interactions will be explored in later modeling stages.  
 
-# %% [markdown]
+# %%
