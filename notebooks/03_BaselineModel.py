@@ -81,7 +81,7 @@ preprocessor = ColumnTransformer(
 # %%
 # Train/validation split
 test_split = 0.2
-X_train, X_valid, y_train, y_valid = train_test_split(
+X_train, X_test, y_train, y_test = train_test_split(
     X, y,
     test_size=test_split,
     random_state=42,
@@ -107,16 +107,16 @@ model.fit(X_train, y_train)
 
 # %%
 # Validate the model
-y_pred = model.predict(X_valid)
-y_proba = model.predict_proba(X_valid)[:, 1]
+y_pred = model.predict(X_test)
+y_proba = model.predict_proba(X_test)[:, 1]
 
-print(classification_report(y_valid, y_pred))
+print(classification_report(y_test, y_pred))
 
-roc_auc = roc_auc_score(y_valid, y_proba)
+roc_auc = roc_auc_score(y_test, y_proba)
 print(f"ROC AUC: {roc_auc:.3f}")
 
 # Plot ROC Curve
-RocCurveDisplay.from_predictions(y_valid, y_proba)
+RocCurveDisplay.from_predictions(y_test, y_proba)
 plt.title("ROC Curve - Baseline Logistic Regression")
 plt.show()
 
@@ -186,7 +186,7 @@ results = []
 
 for threshold in thresholds:
     y_pred_threshold = (y_proba >= threshold).astype(int)
-    report = classification_report(y_valid, y_pred_threshold, output_dict=True)
+    report = classification_report(y_test, y_pred_threshold, output_dict=True)
     results.append({
         "threshold": threshold,
         "precision": report["1"]["precision"],
@@ -218,10 +218,10 @@ plt.show()
 
 # %%
 y_pred_threshold = (y_proba >= 0.75).astype(int)
-report_final = classification_report(y_valid, y_pred_threshold)
+report_final = classification_report(y_test, y_pred_threshold)
 print(report_final)
 
-roc_auc_final = roc_auc_score(y_valid, y_proba)
+roc_auc_final = roc_auc_score(y_test, y_proba)
 print(f"Final ROC AUC: {roc_auc_final:.3f}")
 
 # %% [markdown]
