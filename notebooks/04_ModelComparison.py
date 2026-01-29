@@ -244,4 +244,23 @@ results_df
 #
 # This performance gain comes at the cost of reduced interpretability compared to Logistic Regression.
 
+# %% 
+# Save the final selected model (Random Forest with threshold 0.55)
+import joblib
+final_model = Pipeline(steps=[
+    ("preprocessor", preprocessor),
+    ("classifier", random_forest_clf)
+])
+
+artifact = {
+    "model": final_model,
+    "threshold": 0.55,
+    "model_name": "RandomForest",
+    "notes": "Threshold chosen to maximize F1-score on validation set"
+}
+
+joblib.dump(artifact, "../models/churn_model_rf.pkl")
+
+# Saved for reproducibility; not production deployment.
+
 # %%
