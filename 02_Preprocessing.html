@@ -7511,7 +7511,18 @@ a.anchor-link {
 <!-- End of mermaid configuration --></head>
 <body class="jp-Notebook" data-jp-theme-light="true" data-jp-theme-name="JupyterLab Light">
 <main>
-<div class="jp-Cell jp-MarkdownCell jp-Notebook-cell" id="cell-id=73661295-63cc-4632-bf01-7bf88c681cee">
+<div class="jp-Cell jp-MarkdownCell jp-Notebook-cell" id="cell-id=3ca7f97a">
+<div class="jp-Cell-inputWrapper" tabindex="0">
+<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
+</div>
+<div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
+</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput" data-mime-type="text/markdown">
+<p>Connected to Python 3.10.11</p>
+</div>
+</div>
+</div>
+</div>
+<div class="jp-Cell jp-MarkdownCell jp-Notebook-cell" id="cell-id=ed0d87ab-540f-48bb-bb89-c8ec0f357452">
 <div class="jp-Cell-inputWrapper" tabindex="0">
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
@@ -7528,13 +7539,13 @@ a.anchor-link {
 </div>
 </div>
 </div>
-<div class="jp-Cell jp-MarkdownCell jp-Notebook-cell" id="cell-id=3b41d773-5a2d-417b-91b1-30eaf98f3e11">
+<div class="jp-Cell jp-MarkdownCell jp-Notebook-cell" id="cell-id=3baf15cd-f97e-4379-9861-6813014a79d7">
 <div class="jp-Cell-inputWrapper" tabindex="0">
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
 <div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput" data-mime-type="text/markdown">
-<h3 id="Target-&amp;-Identifier">Target &amp; Identifier<a class="anchor-link" href="#Target-&amp;-Identifier">¶</a></h3><p><strong>Target:</strong></p>
+<h2 id="Target-&amp;-Identifier">Target &amp; Identifier<a class="anchor-link" href="#Target-&amp;-Identifier">¶</a></h2><p><strong>Target:</strong></p>
 <p>Churn</p>
 <ul>
 <li>Binary classification (0 / 1)</li>
@@ -7549,13 +7560,13 @@ a.anchor-link {
 </div>
 </div>
 </div>
-<div class="jp-Cell jp-MarkdownCell jp-Notebook-cell" id="cell-id=b355ced2-c7c6-4fc1-86b5-cf43da41dc5e">
+<div class="jp-Cell jp-MarkdownCell jp-Notebook-cell" id="cell-id=1a1e1bd1-dd3f-4bb8-af7c-dd65b31de73e">
 <div class="jp-Cell-inputWrapper" tabindex="0">
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
 <div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput" data-mime-type="text/markdown">
-<h3 id="Feature-Selection">Feature Selection<a class="anchor-link" href="#Feature-Selection">¶</a></h3><p><strong>A. Numeric features (candidates)</strong></p>
+<h2 id="Feature-Selection">Feature Selection<a class="anchor-link" href="#Feature-Selection">¶</a></h2><p><strong>A. Numeric features (candidates)</strong></p>
 <ul>
 <li>Tenure</li>
 <li>OrderCount</li>
@@ -7569,8 +7580,8 @@ a.anchor-link {
 <p><em>DaySinceLastOrder will be excluded from baseline models due to potential leakage and reconsidered only after a strict prediction timestamp is defined.</em></p>
 <p><strong>B. Categorical features (candidates)</strong></p>
 <ul>
-<li>PreferredLoginDevice</li>
-<li>PreferredPaymentMode</li>
+<li>PreferredLoginDevice - phone &amp; mobile phone combined</li>
+<li>PreferredPaymentMode - CC &amp; Credit Card combined + COD &amp; Cash on Delivery combined</li>
 <li>Gender</li>
 <li>PreferredOrderCategory</li>
 <li>MaritalStatus</li>
@@ -7580,25 +7591,25 @@ a.anchor-link {
 </div>
 </div>
 </div>
-<div class="jp-Cell jp-MarkdownCell jp-Notebook-cell" id="cell-id=16a02393-2fc3-4cfc-a26e-3fac24c082aa">
+<div class="jp-Cell jp-MarkdownCell jp-Notebook-cell" id="cell-id=ce5682a4-6d70-4ff7-ad69-8b87da878af3">
 <div class="jp-Cell-inputWrapper" tabindex="0">
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
 <div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput" data-mime-type="text/markdown">
-<h3 id="Missing-Value-Strategy">Missing Value Strategy<a class="anchor-link" href="#Missing-Value-Strategy">¶</a></h3><p>There are missing values in numeric features.</p>
+<h2 id="Missing-Value-Strategy">Missing Value Strategy<a class="anchor-link" href="#Missing-Value-Strategy">¶</a></h2><p>There are missing values in numeric features.</p>
 <p>Missing values will be imputed using median. For selected numeric features where missingness may be informative, binary missing-value indicators will be added.</p>
 </div>
 </div>
 </div>
 </div>
-<div class="jp-Cell jp-MarkdownCell jp-Notebook-cell" id="cell-id=52946476-70b7-4f31-bf9c-ddace7e93b9f">
+<div class="jp-Cell jp-MarkdownCell jp-Notebook-cell" id="cell-id=bc8af9bc-57d8-48e9-8b5f-1d4756fdd375">
 <div class="jp-Cell-inputWrapper" tabindex="0">
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
 <div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput" data-mime-type="text/markdown">
-<h3 id="Categorical-Encoding-Strategy">Categorical Encoding Strategy<a class="anchor-link" href="#Categorical-Encoding-Strategy">¶</a></h3><p>Categorical features will be encoded using one-hot encoding to allow non-ordinal representation.
+<h2 id="Categorical-Encoding-Strategy">Categorical Encoding Strategy<a class="anchor-link" href="#Categorical-Encoding-Strategy">¶</a></h2><p>Categorical features will be encoded using one-hot encoding to allow non-ordinal representation.
 High-cardinality categorical features are limited, so one-hot encoding is unlikely to introduce excessive dimensionality.</p>
 <p>CityTier will be treated as categorical for baseline models, even though it is ordinal.
 Ordinal encoding may be explored in later experiments.</p>
@@ -7606,13 +7617,13 @@ Ordinal encoding may be explored in later experiments.</p>
 </div>
 </div>
 </div>
-<div class="jp-Cell jp-MarkdownCell jp-Notebook-cell" id="cell-id=5d90ad94-0eac-43b0-b9d3-324bfb097f42">
+<div class="jp-Cell jp-MarkdownCell jp-Notebook-cell" id="cell-id=4599c058-a145-464a-8f3d-ee36eb75ba2e">
 <div class="jp-Cell-inputWrapper" tabindex="0">
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
 <div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput" data-mime-type="text/markdown">
-<h3 id="Scaling">Scaling<a class="anchor-link" href="#Scaling">¶</a></h3><p>Required for:</p>
+<h2 id="Scaling">Scaling<a class="anchor-link" href="#Scaling">¶</a></h2><p>Required for:</p>
 <ul>
 <li>Logistic Regression</li>
 <li>Distance-based models</li>
@@ -7626,13 +7637,13 @@ Ordinal encoding may be explored in later experiments.</p>
 </div>
 </div>
 </div>
-<div class="jp-Cell jp-MarkdownCell jp-Notebook-cell" id="cell-id=75f831f8-0c11-437b-9f97-16e4a34da1cd">
+<div class="jp-Cell jp-MarkdownCell jp-Notebook-cell" id="cell-id=3c4fdefa-9ed2-4131-b09b-74cd8bea4dda">
 <div class="jp-Cell-inputWrapper" tabindex="0">
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
 <div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput" data-mime-type="text/markdown">
-<h3 id="Evaluation-aware-decisions">Evaluation-aware decisions<a class="anchor-link" href="#Evaluation-aware-decisions">¶</a></h3><p>Because churn is imbalanced (16.8%):</p>
+<h2 id="Evaluation-aware-decisions">Evaluation-aware decisions<a class="anchor-link" href="#Evaluation-aware-decisions">¶</a></h2><p>Because churn is imbalanced (16.8%):</p>
 <p>Accuracy is not sufficient to evaluate model performance.
 Focus will be on:</p>
 <ul>
@@ -7645,13 +7656,13 @@ Focus will be on:</p>
 </div>
 </div>
 </div>
-<div class="jp-Cell jp-MarkdownCell jp-Notebook-cell" id="cell-id=908b920e-1ae5-473a-b391-719bc1cd9d37">
+<div class="jp-Cell jp-MarkdownCell jp-Notebook-cell" id="cell-id=35d9f774-5a6a-4e4d-ab5a-d9331fa44321">
 <div class="jp-Cell-inputWrapper" tabindex="0">
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
 <div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput" data-mime-type="text/markdown">
-<h3 id="Special-Feature-Considerations">Special Feature Considerations<a class="anchor-link" href="#Special-Feature-Considerations">¶</a></h3><ul>
+<h2 id="Special-Feature-Considerations">Special Feature Considerations<a class="anchor-link" href="#Special-Feature-Considerations">¶</a></h2><ul>
 <li><strong>DaySinceLastOrder</strong>: Potential leakage risk depending on churn definition. Will be handled cautiously.</li>
 <li><strong>SatisfactionScore</strong>: Counterintuitive relationship with churn. Will be monitored for model interpretability.</li>
 <li><strong>Imbalanced Target</strong>: Churn is imbalanced, so evaluation metrics will account for this (e.g., using AUC-ROC, F1-score).</li>

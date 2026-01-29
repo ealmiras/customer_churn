@@ -26,10 +26,10 @@ plt.style.use('ggplot')
 palette = [
 '#E24A33',  #(orange)
 '#348ABD',  #(blue)
+'#8EBA42',   #(green)
 '#988ED5',  #(cyan)
 '#777777',  #(grey)
 '#FBC15E',  #(yellow)
-'#8EBA42',   #(green)
 '#FFB5B8'    #(pink)
 ]   
 
@@ -79,7 +79,7 @@ plt.tight_layout()
 plt.show()
 
 # %% [markdown]
-# #### EDA Snapshot 1
+#### EDA Snapshot 1
 # **Dataset Overview:**
 # - 5,630 rows
 # - 20 columns
@@ -96,7 +96,7 @@ plt.show()
 # - Categorical features will need encoding (eg. PreferredPaymentMode, Gender etc.)
 # 
 # 
-# #### Findings
+#### Findings
 # Churn Value Counts:
 # 
 #     Churn   Count   Percentage
@@ -110,7 +110,7 @@ plt.show()
 # This imbalance suggests that accuracy alone would be a misleading evaluation metric, and alternative metrics such as recall, precision, and ROC-AUC should be considered.
 #
 # %% [markdown]
-# ### Numeric Features vs Churn
+### Numeric Features vs Churn
 # Numeric features are evaluated by comparing distributions between churned and retained customers.
 # Features showing clear separation are considered stronger candidates for predictive modeling.
 # 
@@ -342,7 +342,7 @@ plt.show()
 # - This suggests that CashbackAmount shows limited predictive power for churn in isolation.
 
 # %% [markdown]
-# #### Summary of Numeric Feature Analysis:
+#### Summary of Numeric Feature Analysis:
 #
 # 1. Tenure shows clear separation between churned and retained customers, suggesting strong predictive potential.
 # 2. DaySinceLastOrder shows a strong association with churn but may introduce data leakage, as the feature may be directly influenced by the churn definition itself.
@@ -351,7 +351,7 @@ plt.show()
 # 4. SatisfactionScore displays a counterintuitive pattern that warrants further investigation.
 
 # %% [markdown]
-# ### Categorical Features vs Churn
+### Categorical Features vs Churn
 # The following analysis examines the relationship between selected categorical features and customer churn.
 # For each feature, we compare category distributions and churn rates to assess potential predictive value.
 # These insights will guide encoding strategies and feature selection in the modeling phase.
@@ -558,7 +558,7 @@ plt.show()
 # - This suggests that CityTier may have predictive power for churn.
 
 # %% [markdown]
-# #### Summary of Categorical Feature Analysis: 
+#### Summary of Categorical Feature Analysis: 
 # Overall, several categorical features demonstrate meaningful variation in churn rates.
 # **PreferredPaymentMode**, **PreferedOrderCat**, and **MaritalStatus** show the strongest potential signal, while **PreferredLoginDevice**, **Gender**, and **CityTier** may provide complementary information.
 #

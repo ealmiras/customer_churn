@@ -8,7 +8,7 @@
 # 4. Which features need special care (leakage / interpretation)
 
 # %% [markdown]
-# ### Target & Identifier
+### Target & Identifier
 # **Target:**
 #
 # Churn
@@ -23,7 +23,7 @@
 # - CustomerID is a unique identifier and is excluded from modeling.
 
 # %% [markdown]
-# ### Feature Selection
+### Feature Selection
 # **A. Numeric features (candidates)**
 # - Tenure
 # - OrderCount
@@ -45,13 +45,13 @@
 # - CityTier
 
 # %% [markdown]
-# ### Missing Value Strategy
+### Missing Value Strategy
 # There are missing values in numeric features.
 #
 # Missing values will be imputed using median. For selected numeric features where missingness may be informative, binary missing-value indicators will be added.
 
 # %% [markdown]
-# ### Categorical Encoding Strategy
+### Categorical Encoding Strategy
 # Categorical features will be encoded using one-hot encoding to allow non-ordinal representation.
 # High-cardinality categorical features are limited, so one-hot encoding is unlikely to introduce excessive dimensionality.
 #
@@ -59,7 +59,7 @@
 # Ordinal encoding may be explored in later experiments.
 
 # %% [markdown]
-# ### Scaling
+### Scaling
 # Required for:
 # - Logistic Regression
 # - Distance-based models
@@ -70,7 +70,7 @@
 # Feature scaling will be applied where required depending on the model family.
 
 # %% [markdown]
-# ### Evaluation-aware decisions
+### Evaluation-aware decisions
 # Because churn is imbalanced (16.8%):
 #
 # Accuracy is not sufficient to evaluate model performance.
@@ -81,7 +81,7 @@
 # - ROC-AUC - overall model quality
 
 # %% [markdown]
-# ### Special Feature Considerations
+### Special Feature Considerations
 # - **DaySinceLastOrder**: Potential leakage risk depending on churn definition. Will be handled cautiously.
 # - **SatisfactionScore**: Counterintuitive relationship with churn. Will be monitored for model interpretability.
 # - **Imbalanced Target**: Churn is imbalanced, so evaluation metrics will account for this (e.g., using AUC-ROC, F1-score).
