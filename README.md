@@ -5,14 +5,12 @@ This project analyzes customer churn behavior and builds a machine learning mode
 ## What is customer churn?
 Customer churn refers to customers who stop doing business with a company. 
 
-In an e-commerce context, churn typically means a customer becomes inactive (e.g., no purchases for a defined period) or is labeled as churned in the dataset.
-
-**For the purpose of this project the churn definition will be accepted as the prior.**
+In an e-commerce context, churn typically means a customer becomes inactive (e.g., no purchases) for a defined period of time.
 
 ## Project goals
 - Understand the main drivers of churn through exploratory data analysis (EDA)
 - Build a baseline churn prediction model
-- Improve performance via feature engineering and model tuning
+- Improve performance via model comparison and decision threshold tuning
 - Produce an interpretable model and clear insights
 
 ## Dataset
@@ -25,25 +23,34 @@ Source: *https://www.kaggle.com/datasets/ankitverma2010/ecommerce-customer-churn
 2. Exploratory data analysis (EDA)
 3. Train/validation split and evaluation metrics selection
 4. Baseline model training
-5. Feature engineering and model improvement
+5. Model comparison and performance improvement
 6. Model interpretation and results reporting
 
+## Final Verdict
+A Random Forest model was selected as the final churn predictor due to its superior ranking and decision performance, with a calibrated decision threshold enabling balanced and cost-aware retention actions.
+
 ## Project structure
-- `data/` — raw and processed datasets
-- `notebooks/` — EDA and experiments
-- `src/` — reusable code (preprocessing, training, evaluation)
-- `models/` — saved model artifacts
-- `reports/` — figures and written summaries
+- `data/`       Raw and processed datasets
+- `notebooks/`  Exploratory analysis, modeling, and experiments
+- `src/`        Reusable preprocessing and modeling code (future work)
+- `models/`     Saved model artifacts and inference utilities
+- `reports/`    Generated reports and visualizations (HTML/PDF)
+
+Note: This project is currently notebook-driven. The src/ directory is reserved for future refactoring and deployment-oriented extensions.
 
 ## Setup
 ```bash
 python -m venv .venv
-source .venv/bin/activate  # macOS/Linux
-# .venv\Scripts\activate   # Windows
+# source .venv/bin/activate  # macOS/Linux
+.venv\Scripts\activate   # Windows
 
 pip install -r requirements.txt
 ```
 
 ## Project Artifacts
-The HTML files in this repository are static exports of Jupyter notebooks for easy viewing. 
+The HTML files in this repository are static exports of Python notebooks for easy viewing. 
 They are not part of the application code.
+
+The PDF files are also added for quick access.
+
+These artifacts are intended for documentation and review purposes only.
